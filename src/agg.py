@@ -31,12 +31,12 @@ def pandas_np_sum(df):
   return df.groupby('category')['value'].apply(lambda x: np.sum([*x], axis=0))
 
 # ③numpy only
-def grouped_sum_bincount(values, categorys):
+def grouped_sum_bincount(values, categories):
   return np.bincount(categories, values)
 
 # ④numpy + Numba
 @njit("f8[:](i4[:], i8[:])", cache=True)
-def grouped_sum_bincount_jit(values, categorys):
+def grouped_sum_bincount_jit(values, categories):
   return np.bincount(categories, values)
 
 ## ************* mean func ************* ##
