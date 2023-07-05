@@ -37,7 +37,7 @@ The signature type you set for the 'Numba' decorator should be changed to match 
  
 # Author
  
-* Kunihiro Tabata
+* amcic
 * lustig.schlagzu@gmail.com
  
 # License
