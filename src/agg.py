@@ -49,7 +49,7 @@ def pandas_np_mean(df):
   return df.groupby('category')['value'].apply(lambda x: np.mean([*x], axis=0))
 
 # ③numpy only
-def grouped_mean(values, categories):
+def grouped_mean_bincount(values, categories):
   counts = grouped_counts_bincount(values, categories)
   sums = grouped_sum_bincount(values, categories)
   return sums / counts
